@@ -70,13 +70,13 @@ const solution = () => {
             .filter((num) => allNumbersArray.includes(num))
 
         // Create a Card object and push it to the array
-        cards.push(new Card(name, winningNumbersArray, allNumbersArray))
+            cards.push(new Card(name, winningNumbersArray, allNumbersArray))
+            console.log('winning nums:', winningNumbersArray)
       })
 
       return cards
     }
     
-
     
     
     
