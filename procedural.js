@@ -12,18 +12,7 @@ const solution = () => {
 
     let winningNumbersArray = []
 
-    const processFile = () => {
-        try {
-            const data = fs.readFileSync('problem.txt', 'utf-8')
-            return parseCards(data)
-        } catch (err) {
-            console.error('Error while reading file!', err)
-            return []
-        }
-    }
-    processFile()
-
-    const parseCards = (data) => {
+        const parseCards = (data) => {
         const splitResult = data.split('\n').map((line) => line.trim().split('|'))
         let cards = []
 
@@ -35,15 +24,15 @@ const solution = () => {
             let name = nameMatch ? nameMatch[0] : 'Unknown Card'
 
             let winningNumbers = nameAndWinning
-                .replace(name, '')
-                .replace(':', '')
-                .trim()
+            .replace(name, '')
+            .replace(':', '')
+            .trim()
             const allNumbersArray = allNumbers.trim().split(/\s+/)
 
             let currentWinningNumbers = winningNumbers
-                .split(/\s+/)
-                .filter((num) => allNumbersArray.includes(num))
-                .map(Number) // Convert to numbers
+            .split(/\s+/)
+            .filter((num) => allNumbersArray.includes(num))
+            .map(Number) // Convert to numbers
 
             // Collect all winning numbers
             winningNumbersArray.push(...currentWinningNumbers)
@@ -51,8 +40,20 @@ const solution = () => {
             cards.push(new Card(name, currentWinningNumbers, allNumbersArray))
         })
 
-    return cards
+        return cards
     }
+
+
+    const processFile = () => {
+        try {
+            const data = fs.readFileSync('problem.txt', 'utf-8')
+            return parseCards(data)
+        } catch (err) {
+            console.error('Error while reading file!', err)
+            return []
+        }
+    }
+    processFile()
 
     const shuffleArray = (array) => {
         for (let i = array.length - 1; i > 0; i--) {
@@ -75,7 +76,6 @@ const solution = () => {
         console.log('Randomly Selected Winning Numbers:', selectedNumbers)
         return selectedNumbers.reduce((sum, num) => sum + num, 0)
     }
-
     
     console.log('All Winning Numbers:', winningNumbersArray)
     console.log('Random Sum of Winning Numbers:', sumRandomWinningNumbers())
