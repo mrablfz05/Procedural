@@ -1,4 +1,4 @@
-export class CardParser {
+export class parseCard {
   constructor(data) {
     this.data = data
     this.cards = []
