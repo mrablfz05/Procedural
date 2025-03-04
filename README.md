@@ -17,7 +17,7 @@ All of codes are based on **Procedural Paradigm** and I'll add more paradigms so
 
 ### 1️⃣ Clone this repository
 ```sh
-https://github.com/mrablfz05/Procedural.git
+https://github.com/mrablfz05/Paradigms.git
 cd procedural-paradigm
 ```
 
@@ -32,8 +32,19 @@ node -v
 ```
 
 ### 4️⃣ Run the script
+If you're in procedural branch:
 ```sh
 node procedural.js
+```
+
+If you're in oop branch:
+```sh
+node oop.js
+```
+
+If you're in fp branch:
+```sh
+node fp.js
 ```
 
 ## 📌 Example Output
