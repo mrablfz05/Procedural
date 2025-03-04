@@ -1,5 +1,5 @@
-import { FileProcessor } from './fileProcessor.js'
-import { Sum } from './randomSum.js'
+import { FileProcessor } from './modules/fileProcessor.js'
+import { Sum } from './modules/randomSum.js'
 
 // Step 1: Read and parse the file
 const fileProcessor = new FileProcessor('./problem.txt')
