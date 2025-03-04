@@ -52,7 +52,6 @@ This project is open source.
 🌟 Feel free to contribute another paradigm of programming or star this repository! ⭐
 ```
 ## More information
-```sh
+
 Read this article on medium:
 [Programming Paradigms](https://medium.com/@mrablfz05/programming-paradigms-c8dbf6ad7018)
-```
