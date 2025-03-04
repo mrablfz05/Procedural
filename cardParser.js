@@ -1,8 +1,9 @@
-export class parseCard {
+export class CardParser {
   constructor(data) {
     this.data = data
     this.cards = []
     this.winningNumbersArray = []
+    this.parse() // Auto-parse data on initialization
   }
 
   parse() {
@@ -37,7 +38,9 @@ export class parseCard {
         allNumbers: allNumbersArray,
       })
     })
+  }
 
+  getCards() {
     return this.cards
   }
 

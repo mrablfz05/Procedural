@@ -1,22 +1,13 @@
-import fs from 'fs'
+import { FileProcessor } from './fileProcessor.js'
+import { Sum } from './randomSum.js'
 
-export class File {
+// Step 1: Read and parse the file
+const fileProcessor = new FileProcessor('./problem.txt')
+const parser = fileProcessor.process()
 
-    constructor(filePath) {
-        this.filePath = filePath
-    }
+console.log('Parsed Cards:', parser.getCards())
+console.log('Winning Numbers:', parser.getWinningNumbers())
 
-    readFile() {
-        try {
-            const data = fs.readFileSync(this.filePath, 'utf-8')
-            return data
-            // console.log(data)
-        } catch (err) {
-            console.error('Error while reading file!', err)
-            return []
-        }
-    }
-}
-
-let file = new File('./problem.txt')
-console.log(file.readFile())
+// Step 2: Get sum of random winning numbers
+const sumInstance = new Sum(parser.getWinningNumbers()) // Pass winning numbers
+console.log('Sum of Random Winning Numbers:', sumInstance.getSum())
