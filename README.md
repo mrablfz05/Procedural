@@ -51,3 +51,8 @@ This project is open source.
 📧 Contact: abolfaz88888888@gmail.com / Telegram: @mrablfz
 🌟 Feel free to contribute another paradigm of programming or star this repository! ⭐
 ```
+## More information
+```sh
+Read this article on medium:
+[Programming Paradigms](https://medium.com/@mrablfz05/programming-paradigms-c8dbf6ad7018)
+```
